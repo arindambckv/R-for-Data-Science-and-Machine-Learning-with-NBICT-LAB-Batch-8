@@ -16,3 +16,7 @@ ggplot(dataset, aes(x = wt, y = mpg)) +
   geom_point(size=2, shape=1)
 ggplot(dataset, aes(x = wt, y = mpg)) + 
   geom_point(size=2, shape=5)
+
+#Adding the regression line
+ggplot(dataset, aes(x = wt, y = mpg)) + 
+  geom_point(size=2, shape=18) geom_smooth()
