@@ -23,30 +23,30 @@ ggplot(dataset, aes(x = wt, y = mpg)) +
   geom_smooth(method= lm)
 
 #removing the confidence interval
-  ggplot(dataset, aes(x = wt, y = mpg)) + 
-    geom_point() +
+ggplot(dataset, aes(x = wt, y = mpg)) + 
+  geom_point() +
   geom_smooth(method = lm, se = FALSE)
 
-  #loess method
-  ggplot(dataset, aes(x = wt, y = mpg)) + 
-    geom_point() +
-    geom_smooth()
+#loess method
+ggplot(dataset, aes(x = wt, y = mpg)) + 
+  geom_point() +
+  geom_smooth()
 #change the line tpe and colour
-  ggplot(dataset, aes(x = wt, y = mpg)) + 
-    geom_point(size=1, shape=18) +
-    geom_smooth(method= lm, linetype = "dashed", color = "red")
- 
-#changing the confidence interval color
-  ggplot(dataset, aes(x = wt, y = mpg)) + 
-    geom_point(size=1, shape=18) +
-    geom_smooth(method= lm, linetype = "dashed", color = "darkred", fill = "blue")
+ggplot(dataset, aes(x = wt, y = mpg)) + 
+  geom_point(size=1, shape=18) +
+  geom_smooth(method= lm, linetype = "dashed", color = "red")
 
-  ggplot(dataset, aes(x = wt, y = mpg)) + 
-    geom_point(size=1, shape=18, colour = "green") +
-    geom_smooth(method= lm, linetype = "dashed", color = "darkred", fill = "blue")
+#changing the confidence interval color
+ggplot(dataset, aes(x = wt, y = mpg)) + 
+  geom_point(size=1, shape=18) +
+  geom_smooth(method= lm, linetype = "dashed", color = "darkred", fill = "blue")
+
+ggplot(dataset, aes(x = wt, y = mpg)) + 
+  geom_point(size=1, shape=18, colour = "green") +
+  geom_smooth(method= lm, linetype = "dashed", color = "darkred", fill = "blue")
 
 #scatter plot with multiple groups
-  
+
 
 #converting the cyl column from a numeric to factor column
 dataset$cyl
@@ -61,3 +61,5 @@ ggplot(dataset, aes(x = wt, y = mpg, shape = cyl, color = cyl)) +
   geom_point()
 
 #changing point shapes, colors and sizes
+ggplot(dataset, aes(x = wt, y = mpg, shape = cyl, color = cyl, size = cyl)) +
+  geom_point()
